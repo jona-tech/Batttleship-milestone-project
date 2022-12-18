@@ -1,3 +1,5 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+from random import randint
+
+#create the board and ships list
+board = [[' '] * 5 for x in range(5)]
+ships = [[' '] * 5 for x in range(5)]
