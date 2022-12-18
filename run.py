@@ -18,3 +18,27 @@ for row in board:
     print(rows, '|'.join(row))
     rows += 1
 
+# Function to make move
+def make_move(board, ships, col, row):
+    if ships[col][row] == 'S':
+        board[col][row] = 'X'
+        print('Ouch! You HIT me!')
+        return True
+    else:
+        board[col][row] = '-'
+        print('Miss!!')
+        return False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
