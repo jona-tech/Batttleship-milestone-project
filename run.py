@@ -41,7 +41,7 @@ def check_move(board, col, row):
     """
     Check if move is valid
     """
-    if col < 0 or col > 4 or row <0 or row > 4:
+    if col < 0 or col > 4 or row < 0 or row > 4:
         return False
     if board[col][row] == ' ':
         return True
