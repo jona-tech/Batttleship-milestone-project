@@ -13,10 +13,11 @@ for i in range(5):
 
 
 # Function to print the board
-rows = 1
-for row in board:
-    print(rows, '|'.join(row))
-    rows += 1
+def print_board(board):
+    rows = 1
+    for row in board:
+        print(rows, '|'.join(row))
+        rows += 1
 
 
 # Function to make move
@@ -30,6 +31,7 @@ def make_move(board, ships, col, row):
         print('Miss!!')
         return False
 
+
 # Check if game over
 def check_game_over(board, ships):
     for i in range(5):
@@ -37,12 +39,26 @@ def check_game_over(board, ships):
             if board[i][j] == ' ' and ships[i][j] == 'S':
                 return False
 
+
 def main():
     turns = 10
+    print_board(board)
     while turns > 0:
         col, row = input('Choose column and row: ').split()
         col = int(col)
         row = int(row)
+
+        if make_move(board, ships, col, row):
+            if check_game_over(board, ships):
+                print('You win!')
+                break
+        else:
+            if check_game_over(board, ships):
+                print('Game over!')
+                break
+
+        turns -= 1
+        print_board(board)
 
 
 main()
