@@ -18,6 +18,7 @@ for row in board:
     print(rows, '|'.join(row))
     rows += 1
 
+
 # Function to make move
 def make_move(board, ships, col, row):
     if ships[col][row] == 'S':
@@ -29,7 +30,22 @@ def make_move(board, ships, col, row):
         print('Miss!!')
         return False
 
+# Check if game over
+def check_game_over(board, ships):
+    for i in range(5):
+        for j in range(5):
+            if board[i][j] == ' ' and ships[i][j] == 'S':
+                return False
 
+def main():
+    turns = 10
+    while turns > 0:
+        col, row = input('Choose column and row: ').split()
+        col = int(col)
+        row = int(row)
+
+
+main()
 
 
 
