@@ -14,7 +14,8 @@ for i in range(5):
 
 # Function to print the board
 def print_board(board):
-    rows = 1
+    print('- - - - - -\nBATTLESHIPS\n- - - - - -\n  0 1 2 3 4')
+    rows = 0
     for row in board:
         print(rows, '|'.join(row))
         rows += 1
@@ -32,6 +33,15 @@ def make_move(board, ships, col, row):
         return False
 
 
+# Check if move is valid
+def check_move(board, col, row):
+    if col < 0 or col > 4 or row <0 or row > 4:
+        return False
+    if board[col][row] == ' ':
+        return True
+    return False
+
+
 # Check if game over
 def check_game_over(board, ships):
     for i in range(5):
@@ -47,6 +57,10 @@ def main():
         col, row = input('Choose column and row: ').split()
         col = int(col)
         row = int(row)
+
+        if not check_move(board, col, row):
+            print('Move invalid!')
+            continue
 
         if make_move(board, ships, col, row):
             if check_game_over(board, ships):
