@@ -86,6 +86,7 @@ def main():
         print_board(board)
 
 
+# Called main function to start game
 main()
 
 
