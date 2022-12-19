@@ -12,8 +12,10 @@ for i in range(5):
     ships[r][c] = 'S'
 
 
-# Function to print the board
 def print_board(board):
+    """
+    Function to print the board
+    """
     print('- - - - - -\nBATTLESHIPS\n- - - - - -\n  0 1 2 3 4')
     rows = 0
     for row in board:
@@ -21,8 +23,10 @@ def print_board(board):
         rows += 1
 
 
-# Function to make move
 def make_move(board, ships, col, row):
+    """
+    Function to make move
+    """
     if ships[col][row] == 'S':
         board[col][row] = 'X'
         print('Ouch! You HIT me!')
@@ -33,8 +37,10 @@ def make_move(board, ships, col, row):
         return False
 
 
-# Check if move is valid
 def check_move(board, col, row):
+    """
+    Check if move is valid
+    """
     if col < 0 or col > 4 or row <0 or row > 4:
         return False
     if board[col][row] == ' ':
@@ -42,8 +48,10 @@ def check_move(board, col, row):
     return False
 
 
-# Check if game over
 def check_game_over(board, ships):
+    """
+    Check if game over
+    """
     for i in range(5):
         for j in range(5):
             if board[i][j] == ' ' and ships[i][j] == 'S':
@@ -51,6 +59,9 @@ def check_game_over(board, ships):
 
 
 def main():
+    """
+    Main function for gameplay
+    """
     turns = 10
     print_board(board)
     while turns > 0:
