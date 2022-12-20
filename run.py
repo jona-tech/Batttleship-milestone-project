@@ -16,8 +16,8 @@ def print_board(board):
     """
     Function to print the board
     """
-    print('- - - - - -\nBATTLESHIPS\n- - - - - -\n  0 1 2 3 4')
-    rows = 0
+    print('- - - - - -\nBATTLESHIPS\n- - - - - -\n  1 2 3 4 5')
+    rows = 1
     for row in board:
         print(rows, '|'.join(row))
         rows += 1
@@ -65,12 +65,12 @@ def main():
     turns = 10
     print_board(board)
     while turns > 0:
-        col, row = input('Choose column and row: ').split()
-        col = int(col)
-        row = int(row)
+        col, row = input('Choose column and row: ').split(',')
+        col = int(col)-1
+        row = int(row)-1
 
         if not check_move(board, col, row):
-            print('Move invalid!')
+            print('Move invalid or out of range!')
             continue
 
         if make_move(board, ships, col, row):
