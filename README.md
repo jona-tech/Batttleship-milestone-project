@@ -15,24 +15,47 @@ The game is a classic battleship game. Five ships are placed at random places in
 
 ### Welcome and Info section
 
-The first section displays printed text to welcome the player 
-<pic>
+The first section displays printed text to welcome the player <br>
+![Alt text](https://i.imgur.com/wB9kzxi.png)
 
-Also a short info section to describe the game rules.
-<pic>
+Also a short info section to describe the game rules.<br>
+![Alt text](https://i.imgur.com/WVjXjcs.png)
 
 
 ### Languages & Modules
 
 * The game is written entirely in Python and can be played directly in the terminal window.
-* The randint statement from random module has been imported to place ships at random places over the board.
+* The randint statement from random module has been imported to place ships at random places over the board by generating random numbers.
 
 ## Testing
 
 * I have been continously testing the game throughout the development by calling functions and testing them myself. 
-* The file is designed to fit (pep8) standards and has no major errors
+* The file is designed to fit (pep8) standards and has no major errors, though there are minor one's about redefining the outer scope variables<br>
+![Alt text](https://i.imgur.com/vHf0oIb.png)
 
 ## Deployment
+
+This project was deployed through github and heroku platforms.
+
+A live link kan be found here: https://git.heroku.com/battleships-jb.git
+
+And a link to the Github repository: https://github.com/jona-tech/Batttleship-milestone-project.git
+
+
+<ol>
+<li>Go to the website https://heroku.com </li>
+<li>Log in if you have an account, like me, otherwise sign up</li>
+<li>Go to dashboard and select "Create new App"</li>
+<li>Create a name for the project and select region</li>
+<li>Click create</li>
+<li>Go to settings and add config var: Key: PORT, Value: 8000</li>
+<li>Add Python and Node.js buildpacks to project.</li>
+<li>Go to the Deploy section and choose github as source for deployment</li>
+<li>Write the name of your repository</li>
+<li>Press search and then choose to deploy from "main" branch</li>
+<li>Choose manual daployment</li>
+<li>And the game is live!</li>
+</ol>
 
 ## Credits
 
