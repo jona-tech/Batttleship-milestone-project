@@ -65,9 +65,14 @@ def main():
     turns = 10
     print_board(board)
     while turns > 0:
-        col, row = input('Choose column and row: ').split(',')
-        col = int(col)-1
-        row = int(row)-1
+        try:
+            col, row = input('Choose column and row: \n').split(',')
+            col = int(col)-1
+            row = int(row)-1
+        except ValueError:
+            print('Invalid input! \nFormat should be two numbers between 1-5, \
+                separated by a comma.\n ')
+            continue
 
         if not check_move(board, col, row):
             print('Move invalid or out of range!')
@@ -86,17 +91,11 @@ def main():
         print_board(board)
 
 
-# Called main function to start game
+# Print welcome and information
+print('Welcome to Battleships game!')
+print('\n\nInfo:\nThere are five ships hiding on the game-board\
+    \nYour mission is to hit all five ships before your ten rounds are over\
+    \nYou have to pick a row and a column to make a move')
+print('The format should be "column, row".\nExample: 2, 5')
+# Start game
 main()
-
-
-
-
-
-
-
-
-
-
-
-
