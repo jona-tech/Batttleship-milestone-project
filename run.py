@@ -1,3 +1,6 @@
+"""
+Import randint statement from random module to generate random numbers
+"""
 from random import randint
 
 # Create the board and ships list
