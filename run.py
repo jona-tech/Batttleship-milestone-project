@@ -69,7 +69,7 @@ def main():
     print_board(board)
     while turns > 0:
         try:
-            col, row = input('Choose column and row: \n').split(',')
+            col, row = input('Choose column and row:\n').split(',')
             col = int(col)-1
             row = int(row)-1
         except ValueError:

@@ -43,3 +43,5 @@ Also a short info section to describe the game rules.
 
 ## Other
 
+* Unfixed Bug: The linter tips show some minor errors about redifining variables "ships" and "board" from outer scope
+
