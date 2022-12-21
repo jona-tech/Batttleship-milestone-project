@@ -37,7 +37,7 @@ Also a short info section to describe the game rules.<br>
 
 This project was deployed through github and heroku platforms.
 
-A live link kan be found here: https://git.heroku.com/battleships-jb.git
+A live link kan be found here: https://battleships-jb.herokuapp.com/
 
 And a link to the Github repository: https://github.com/jona-tech/Batttleship-milestone-project.git
 
