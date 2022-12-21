@@ -4,15 +4,15 @@ Import randint statement from random module to generate random numbers
 from random import randint
 
 # Create the board and ships list
-board = [[' '] * 5 for x in range(5)]
-ships = [[' '] * 5 for x in range(5)]
+BOARD = [[' '] * 5 for x in range(5)]
+SHIPS = [[' '] * 5 for x in range(5)]
 
 
 # Place the ships on the board at random locations
-for i in range(5):
+for n in range(5):
     r = randint(0, 4)
     c = randint(0, 4)
-    ships[r][c] = 'S'
+    SHIPS[r][c] = 'S'
 
 
 def print_board(board):
@@ -65,33 +65,33 @@ def main():
     """
     Main function for gameplay
     """
-    turns = 10
-    print_board(board)
+    turns = 11
+    print_board(BOARD)
     while turns > 0:
         try:
             col, row = input('Choose column and row:\n').split(',')
             col = int(col)-1
             row = int(row)-1
         except ValueError:
-            print('Invalid input! \nFormat should be two numbers between 1-5, \
-                separated by a comma.\n ')
+            print('Invalid input! \
+                \nFormat should be two numbers between 1-5.\n ')
             continue
 
-        if not check_move(board, col, row):
+        if not check_move(BOARD, col, row):
             print('Move invalid or out of range!')
             continue
 
-        if make_move(board, ships, col, row):
-            if check_game_over(board, ships):
+        turns -= 1
+
+        if make_move(BOARD, SHIPS, col, row):
+            if check_game_over(BOARD, SHIPS):
                 print('You win!')
                 break
         else:
-            if check_game_over(board, ships):
+            if turns == 0:
                 print('Game over!')
                 break
-
-        turns -= 1
-        print_board(board)
+        print_board(BOARD)
 
 
 # Print welcome and information

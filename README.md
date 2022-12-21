@@ -9,7 +9,7 @@ The rules are easy and most people can understand the game, wich makes it suitab
 
 ## Description
 
-The game is a classic battleship game. Five ships are placed at random places in order to be "hit" by one of the players guesses. In this version, the player has 10 turns to try to sink the ships, otherwise the player loose. 
+The game is a classic battleship game. Five ships are placed at random places in order to be "hit" by the players guesses. In this version, the player has 10 turns to try to sink the fleet, otherwise the player loose. 
 
 ## Features
 
@@ -26,12 +26,15 @@ Also a short info section to describe the game rules.<br>
 
 * The game is written entirely in Python and can be played directly in the terminal window.
 * The randint statement from random module has been imported to place ships at random places over the board by generating random numbers.
+* The python code includes try/exception handling, conditional statements, for and while loops and lists etc.
+<br>
+![Alt text](https://i.imgur.com/bGLIRMZ.png)
 
 ## Testing
 
 * I have been continously testing the game throughout the development by calling functions and testing them myself. 
-* The file is designed to fit (pep8) standards and has no major errors, though there are minor one's about redefining the outer scope variables<br>
-![Alt text](https://i.imgur.com/vHf0oIb.png)
+* The file is designed to fit (pep8) standards and has no errors in the linter<br>
+* The application has also been extensively tested on the Heroku platform to ensure consistency throughout platforms.
 
 ## Deployment
 
@@ -66,5 +69,8 @@ And a link to the Github repository: https://github.com/jona-tech/Batttleship-mi
 
 ## Other
 
-* Unfixed Bug: The linter tips show some minor errors about redifining variables "ships" and "board" from outer scope
+* Fixed Bug: The linter tips showed 7 errors about redifining variables "ships" and "board" from outer scope. 
+This was fixed by renaming the global variables
+* Game Over didn't show up when the game was over. 
+This was fixed by adding a conditional statement that prints game over when the player is out of rounds.
 
