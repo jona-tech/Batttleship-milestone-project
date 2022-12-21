@@ -5,6 +5,8 @@ Battleships is a game intended for users to have a good and fun time by trying t
 The target audience is anybody who enjoys guessing games.
 The rules are easy and most people can understand the game, wich makes it suitable for a wide audience throughout most ages.
 
+The live link to the game on Heroku can be found here: https://battleships-jb.herokuapp.com/
+
 ![Alt text](https://i.imgur.com/LoOLwIW.png)
 
 ## Description
@@ -24,6 +26,7 @@ Also a short info section to describe the game rules.<br>
 
 ### Languages & Modules
 
+* I've been using git throughout the development of this app.
 * The game is written entirely in Python and can be played directly in the terminal window.
 * The randint statement from random module has been imported to place ships at random places over the board by generating random numbers.
 * The python code includes try/exception handling, conditional statements, for and while loops and lists etc.
@@ -35,14 +38,15 @@ Also a short info section to describe the game rules.<br>
 * I have been continously testing the game throughout the development by calling functions and testing them myself. 
 * The file is designed to fit (pep8) standards and has no errors in the linter<br>
 * The application has also been extensively tested on the Heroku platform to ensure consistency throughout platforms.
+* The game runs through debug session without any problems.
 
 ## Deployment
 
-This project was deployed through github and heroku platforms.
+This project was deployed through Heroku with connection to my Github repository.
 
 A live link kan be found here: https://battleships-jb.herokuapp.com/
 
-And a link to the Github repository: https://github.com/jona-tech/Batttleship-milestone-project.git
+Link to the Github repository: https://github.com/jona-tech/Batttleship-milestone-project.git
 
 
 <ol>
@@ -55,8 +59,8 @@ And a link to the Github repository: https://github.com/jona-tech/Batttleship-mi
 <li>Add Python and Node.js buildpacks to project.</li>
 <li>Go to the Deploy section and choose github as source for deployment</li>
 <li>Write the name of your repository</li>
-<li>Press search and then choose to deploy from "main" branch</li>
-<li>Choose manual daployment</li>
+<li>Press search and then click "connect"</li>
+<li>Go to manual deploy section and deploy "main" branch</li>
 <li>And the game is live!</li>
 </ol>
 
